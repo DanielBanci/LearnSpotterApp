@@ -1,6 +1,6 @@
-package app.ui_login;
+package app.ui.login;
 
-import app.customs.ImagePanel;
+import app.ui.customs.ImagePanel;
 
 import javax.swing.*;
 import java.awt.*;

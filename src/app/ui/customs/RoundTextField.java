@@ -1,21 +1,21 @@
-package app.customs;
+package app.ui.customs;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.geom.RoundRectangle2D;
 
 /**
- * This class is a round button.
+ * This class is a round text field.
  * @author Daniel
  * @version 1.0
  */
-public class RoundButton extends JButton {
+public class RoundTextField extends JTextField {
     private Shape shape;
 
     /**
-     * Constructs a new RoundButton object with opaque set to false.
+     * Constructs a new RoundTextField object with opaque set to false.
      */
-    public RoundButton() {
+    public RoundTextField() {
         super();
         setOpaque(false);
     }

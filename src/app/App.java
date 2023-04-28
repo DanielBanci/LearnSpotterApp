@@ -1,7 +1,6 @@
 package app;
 
-import app.ui_login.LoginWindow;
-import app.ui_main_window.MainPanel;
+import app.ui.login.LoginWindow;
 
 import javax.swing.*;
 

@@ -1,4 +1,4 @@
-package app.customs;
+package app.ui.customs;
 
 import javax.swing.*;
 import java.awt.*;

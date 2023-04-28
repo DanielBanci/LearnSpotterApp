@@ -1,11 +1,11 @@
-package app.ui_login;
+package app.ui.login;
 
 import app.App;
-import app.customs.RoundButton;
-import app.customs.RoundPanelWithShadow;
-import app.customs.RoundPasswordField;
-import app.customs.RoundTextField;
-import app.ui_main_window.MainPanel;
+import app.ui.customs.RoundButton;
+import app.ui.customs.RoundPanelWithShadow;
+import app.ui.customs.RoundPasswordField;
+import app.ui.customs.RoundTextField;
+import app.ui.main_window.MainPanel;
 
 import javax.swing.*;
 import java.awt.*;

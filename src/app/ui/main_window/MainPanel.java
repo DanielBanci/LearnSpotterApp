@@ -1,7 +1,6 @@
-package app.ui_main_window;
+package app.ui.main_window;
 
-import app.App;
-import app.customs.*;
+import app.ui.customs.*;
 
 import javax.swing.*;
 import javax.swing.border.Border;

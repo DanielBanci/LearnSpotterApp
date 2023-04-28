@@ -1,18 +1,21 @@
-package app.customs;
+package app.ui.customs;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.geom.RoundRectangle2D;
 
-public class RoundPanel extends JPanel {
+/**
+ * Class that represent a round password field.
+ * @author Daniel
+ * @version 1.0
+ */
+public class RoundPasswordField extends JPasswordField {
     private Shape shape;
-    private int arcWidth = 40;
-    private int arcHeight = 40;
 
     /**
-     * Constructs a new RoundPanel object with opaque set to false.
+     * Constructs a new RoundPasswordField object with opaque set to false.
      */
-    public RoundPanel() {
+    public RoundPasswordField() {
         super();
         setOpaque(false);
     }
@@ -25,8 +28,7 @@ public class RoundPanel extends JPanel {
     @Override
     protected void paintComponent(Graphics g) {
         g.setColor(getBackground());
-        g.setColor(Color.LIGHT_GRAY);
-        g.fillRoundRect(0, 0, getWidth()-1, getHeight()-1, arcWidth, arcHeight);
+        g.fillRoundRect(0, 0, getWidth()-1, getHeight()-1, 15, 15);
         super.paintComponent(g);
     }
     /**
@@ -37,8 +39,7 @@ public class RoundPanel extends JPanel {
     @Override
     protected void paintBorder(Graphics g) {
         g.setColor(getForeground());
-        g.setColor(getBackground());
-        g.drawRoundRect(0, 0, getWidth()-1, getHeight()-1, arcWidth, arcHeight);
+        g.drawRoundRect(0, 0, getWidth()-1, getHeight()-1, 15, 15);
     }
     /**
      * Checks if the specified point is contained within the rounded rectangular shape of the component.
@@ -50,7 +51,7 @@ public class RoundPanel extends JPanel {
     @Override
     public boolean contains(int x, int y) {
         if (shape == null || !shape.getBounds().equals(getBounds())) {
-            shape = new RoundRectangle2D.Float(0, 0, getWidth()-1, getHeight()-1, arcWidth, arcHeight);
+            shape = new RoundRectangle2D.Float(0, 0, getWidth()-1, getHeight()-1, 15, 15);
         }
         return shape.contains(x, y);
     }

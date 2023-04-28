@@ -1,6 +1,6 @@
-package app.ui_main_window;
+package app.ui.main_window;
 
-import app.customs.RoundMenuBar;
+import app.ui.customs.RoundMenuBar;
 
 import javax.swing.*;
 import java.awt.*;
