@@ -13,7 +13,7 @@ public class RoundButton extends JButton {
     private Shape shape;
 
     /**
-     * Constructs a new RoundPasswordField object with opaque set to false.
+     * Constructs a new RoundButton object with opaque set to false.
      */
     public RoundButton() {
         super();

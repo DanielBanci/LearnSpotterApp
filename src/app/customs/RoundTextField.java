@@ -13,7 +13,7 @@ public class RoundTextField extends JTextField {
     private Shape shape;
 
     /**
-     * Constructs a new RoundPasswordField object with opaque set to false.
+     * Constructs a new RoundTextField object with opaque set to false.
      */
     public RoundTextField() {
         super();

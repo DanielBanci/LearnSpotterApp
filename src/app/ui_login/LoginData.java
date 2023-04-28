@@ -1,12 +1,16 @@
 package app.ui_login;
 
+import app.App;
 import app.customs.RoundButton;
-import app.customs.RoundPanel;
+import app.customs.RoundPanelWithShadow;
 import app.customs.RoundPasswordField;
 import app.customs.RoundTextField;
+import app.ui_main_window.MainPanel;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  * The class represents a panel with the login information and
@@ -26,11 +30,33 @@ public class LoginData {
      * Creating the component properly.
      */
     private void createUIComponents() {
-        loginDataPanel = new RoundPanel();
+        loginDataPanel = new RoundPanelWithShadow();
         textFieldEmail = new RoundTextField();
         textFieldEmail.setMinimumSize(new Dimension(200,10));
         passwordField = new RoundPasswordField();
         loginButton = new RoundButton();
+        loginButton.addActionListener(loginButtonActionListener());
+    }
+
+    /**
+     * Makes the action from login button.
+     * It will check user input, try to get user s account info and log in the user
+     * @return action for login button
+     */
+    private ActionListener loginButtonActionListener(){
+        ActionListener act = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {                        //TO DO: check input and login the users
+                //complete code here
+
+                //Open the app for the user
+                App.getMainFrame().setContentPane(new MainPanel().getSupportPanel());
+                App.getMainFrame().pack();
+                App.getMainFrame().setExtendedState(JFrame.MAXIMIZED_BOTH);
+            }
+        };
+
+        return act;
     }
     public JPanel getLoginDataPanel() {
         return loginDataPanel;

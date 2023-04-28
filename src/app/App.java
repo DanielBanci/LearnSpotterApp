@@ -1,6 +1,7 @@
 package app;
 
 import app.ui_login.LoginWindow;
+import app.ui_main_window.MainPanel;
 
 import javax.swing.*;
 
@@ -11,6 +12,10 @@ import javax.swing.*;
  * @version 1.0
  */
 public class App {
+    public static JFrame getMainFrame() {
+        return mainFrame;
+    }
+
     private static JFrame mainFrame;
 
     public static void main(String[] args) {
@@ -18,6 +23,7 @@ public class App {
         mainFrame.setContentPane(new LoginWindow().contentPanel);
         mainFrame.setBounds(0,0,1000,600);
         mainFrame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+
         mainFrame.setVisible(true);
     }
 }

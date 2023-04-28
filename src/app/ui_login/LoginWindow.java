@@ -1,21 +1,22 @@
 package app.ui_login;
 
-import app.customs.ImageResizer;
-import app.ui_login.LoginData;
+import app.customs.ImagePanel;
 
 import javax.swing.*;
 import java.awt.*;
 
 /**
  * This class represents the login window content.
+ * It has a welcoming message on the left side and a translucent
+ * panel on the right that contains the login input interface.
  * @author Daniel
  * @version 1.0
  */
 public class LoginWindow {
     public JPanel contentPanel;//main panel
-    private JPanel leftPanel;//left panel with login data
+    private JPanel rightPanel;//left panel with login data
     private JPanel loginDataPanel;//panel with the login data
-    private JLabel textImageLbl;//resizable image with a welcoming message
+    private JPanel imagePanel;//resizable image with a welcoming message
     private ImageIcon background;//background image
 
     public LoginWindow(){
@@ -36,7 +37,7 @@ public class LoginWindow {
         };
 
         //make left panel translucent
-        leftPanel = new JPanel(){
+        rightPanel = new JPanel(){
             @Override
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
@@ -45,13 +46,12 @@ public class LoginWindow {
                 g.fillRect(0, 0, getWidth(), getHeight());
             }
         };
-        leftPanel.setOpaque(false);
+        rightPanel.setOpaque(false);
 
         //login data panel
         loginDataPanel = new LoginData().getLoginDataPanel();
 
-        //resizable image
-        textImageLbl = new ImageResizer("res/login_text_image (2).png");
-
+        //text (left part)
+        imagePanel = new ImagePanel("res/login_text_image.png",new Dimension(500,500));
     }
 }
